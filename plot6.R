@@ -30,4 +30,10 @@ ggplot(DF, aes(x=year, y=Emissions, color=City, group=City)) +
 
 dev.off()
 
+png(filename='./plot6-2.png', width=900, height=500, units='px')
+
+qplot(year, Emissions, data=DF, color=City, xlab="Year", main = "Comparison of Emissions Reduction in Baltimore and L.A.")+geom_smooth(method="lm")
+
+dev.off()
+
 rm(NEI, SCC, NEImerge, NEIsubMA, NEIsubCA, colSumMA, colSumCA, DF)

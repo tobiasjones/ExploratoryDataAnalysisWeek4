@@ -9,7 +9,7 @@ SCC <- readRDS("./data/Source_Classification_Code.rds")
 colSum <- aggregate(NEI$Emissions, by=list(year=NEI$year), FUN=sum)
 colSum$x1 <- colSum$x / 1000
 
-png(filename='./plot1.png', width=900, height=500, units='px')
+#png(filename='./plot1.png', width=900, height=500, units='px')
 
 barplot(colSum$x1, 
         colSum$year, main="Total Emmissions by Year", 

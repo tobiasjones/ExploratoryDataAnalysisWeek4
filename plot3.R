@@ -21,4 +21,10 @@ ggplot(colSum, aes(year, y=x, group = type, color = type)) +
 
 dev.off()
 
+png(filename='./plot3-2.png', width=900, height=500, units='px')
+
+qplot(year, x, data=colSum, facets=.~type, xlab="Year")+geom_smooth(method="lm")
+
+dev.off()
+
 rm(NEI, SCC, NEImerge, NEIsub, colSum)
